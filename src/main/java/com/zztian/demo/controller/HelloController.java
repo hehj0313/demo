@@ -38,7 +38,7 @@ public class HelloController {
     public ResponseEntity<JsonResult> getUserById (@PathVariable(value = "id") Integer id,@PathVariable(value = "age") Integer age){
         JsonResult r = new JsonResult();
 
-
+        logger.info("测试ing---------------");
         try {
             User user = userService.getUserById(id);
             r.setResult(user);
